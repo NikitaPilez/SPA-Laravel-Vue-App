@@ -8,6 +8,19 @@ class MainController extends Controller
 {
     public function main()
     {
-        return view('welcome');
+        $urlData = [
+            array(
+                'title' => 'FirstTitle',
+                'url'   => 'http://firsttitle'
+            ),
+            array(
+                'title' => 'SecondTitle',
+                'url'   => 'http://secondtitle'
+            )
+        ];
+
+        return view('main',[
+            'urlData' => $urlData
+        ]);
     }
 }
