@@ -11,5 +11,8 @@
         <div class="row">
             <chartline-component></chartline-component>
         </div>
+        <div class="row">
+            <chartpie-component></chartpie-component>
+        </div>
     </div>
 @endsection

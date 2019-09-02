@@ -17,6 +17,8 @@ Route::get('get-json','MainController@getJson');
 
 Route::get('chart-data','MainController@chartData');
 
+Route::get('chart-data-pie','MainController@chartDataPie');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
