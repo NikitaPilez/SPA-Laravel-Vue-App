@@ -8,5 +8,8 @@
         <div class="row">
             <ajax-component></ajax-component>
         </div>
+        <div class="row">
+            <chartline-component></chartline-component>
+        </div>
     </div>
 @endsection
