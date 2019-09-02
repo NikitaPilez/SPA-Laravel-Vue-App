@@ -13,6 +13,8 @@
 
 Route::get('/', 'MainController@main');
 
+Route::get('get-json','MainController@getJson');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
