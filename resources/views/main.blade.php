@@ -3,6 +3,9 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <testtable-component></testtable-component>
+        </div>
+        <div class="row">
             <prop-component :urldata="{{json_encode($urlData)}}"></prop-component>
         </div>
         <div class="row">

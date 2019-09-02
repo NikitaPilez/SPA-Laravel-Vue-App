@@ -82,4 +82,15 @@ class MainController extends Controller
             )
         ];
     }
+
+    public function getTable()
+    {
+        $data = array(
+            'id' => rand(0,100),
+            'title' => 'Test '.rand(0,100),
+            'description' => 'It is '. rand(0,100). 'th description!'
+        );
+
+        return $data;
+    }
 }
