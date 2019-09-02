@@ -64,4 +64,22 @@ class MainController extends Controller
             ])
         ];
     }
+
+    public function randomData()
+    {
+        return [
+            'labels' => ['Winter', 'Spring', 'Summer', 'Autumn'],
+            'datasets' => array([
+                    'label' => 'Example 1',
+                    'backgroundColor' => '#008744',
+                    'data' => [rand(0,40000), rand(0,40000),rand(0,40000), rand(0,40000)],
+                ],
+                [
+                    'label' => 'Example 2',
+                    'backgroundColor' => '#196dae',
+                    'data' => [rand(0,40000), rand(0,40000),rand(0,40000), rand(0,40000)],
+                ]
+            )
+        ];
+    }
 }

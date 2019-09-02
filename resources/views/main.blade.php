@@ -14,5 +14,8 @@
         <div class="row">
             <chartpie-component></chartpie-component>
         </div>
+        <div class="row">
+            <chartrandom-component></chartrandom-component>
+        </div>
     </div>
 @endsection
