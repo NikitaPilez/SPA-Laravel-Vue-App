@@ -23,4 +23,23 @@ class MainController extends Controller
             'urlData' => $urlData
         ]);
     }
+
+    public function getJson(){
+        $urlData = [
+            array(
+                'title' => 'FirstTitle',
+                'url'   => 'http://firsttitle'
+            ),
+            array(
+                'title' => 'SecondTitle',
+                'url'   => 'http://secondtitle'
+            ),
+            array(
+                'title' => 'SecondTitle',
+                'url'   => 'http://secondtitle'
+            )
+        ];
+
+        return $urlData;
+    }
 }
