@@ -21,6 +21,7 @@ Vue.component('ajax-component', require('./components/AjaxComponent.vue'));
 Vue.component('chartline-component', require('./components/ChartlineComponent.vue'));
 Vue.component('chartpie-component', require('./components/ChartpieComponent.vue'));
 Vue.component('chartrandom-component', require('./components/ChartrandomComponent.vue'));
+Vue.component('testtable-component', require('./components/TesttableComponent.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -29,7 +29,7 @@
         },
         methods:{
             update: function() {
-                console.log(this.urldata);
+
             }
         }
     }

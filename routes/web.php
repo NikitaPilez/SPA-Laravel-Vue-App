@@ -13,6 +13,8 @@
 
 Route::get('/', 'MainController@main');
 
+Route::get('get-table','MainController@getTable');
+
 Route::get('get-json','MainController@getJson');
 
 Route::get('chart-data','MainController@chartData');
