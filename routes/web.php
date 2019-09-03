@@ -13,6 +13,10 @@
 
 Route::get('/', 'MainController@main');
 
+Route::get('search-form','MainController@searchForm');
+
+Route::get('get-random-string','MainController@getRandomString');
+
 Route::get('get-table','MainController@getTable');
 
 Route::get('get-json','MainController@getJson');

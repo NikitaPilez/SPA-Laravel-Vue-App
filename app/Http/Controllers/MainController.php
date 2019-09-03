@@ -6,6 +6,25 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
+    public function searchForm()
+    {
+        return view('search');
+    }
+
+    public function getRandomString(){
+        $values = [];
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        $result = '';
+
+        for($k = 0; $k < 20; $k++){
+            for ($i = 0; $i < 10; $i++)
+                $result .= $characters[mt_rand(0, 61)];
+            array_push($values,$result);
+            $result = '';
+        }
+        return $values;
+    }
+
     public function main()
     {
         $urlData = [
