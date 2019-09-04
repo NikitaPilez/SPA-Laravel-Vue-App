@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <search-component></search-component>
+    <div class="container">
+        <div class="row">
+            <socket-component></socket-component>
+            <search-component></search-component>
+        </div>
+    </div>
+
 @endsection
