@@ -112,4 +112,29 @@ class MainController extends Controller
 
         return $data;
     }
+
+    public function newData(Request $request)
+    {
+        $result = [
+            'labels' => ['Winter', 'Spring', 'Summer', 'Autumn'],
+            'datasets' => array([
+                'label' => 'Example 1',
+                'backgroundColor' => '#008744',
+                'data' => [rand(0,40000), rand(0,40000),rand(0,40000), rand(0,40000)],
+            ])
+        ];
+
+        if($request->has('label')){
+            $result['labels'][] = $request->input('label');
+            $result['datasets'][0]['data'][] = (integer)$request->input('sale');
+
+            if($request->has('realtime')){
+                if(filter_var($request->input('realtime'),FILTER_VALIDATE_BOOLEAN)){
+                    event(new \App\Events\NewEvent($result));
+                }
+            }
+        }
+
+        return $result;
+    }
 }
