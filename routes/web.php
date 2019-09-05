@@ -13,6 +13,10 @@
 
 Route::get('/', 'MainController@main');
 
+Route::get('general-chat','ChatController@index');
+
+Route::get('send-message','ChatController@sendMessage');
+
 Route::get('search-form','MainController@searchForm');
 
 Route::get('get-random-string','MainController@getRandomString');

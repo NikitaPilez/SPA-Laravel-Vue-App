@@ -24,6 +24,7 @@ Vue.component('chartrandom-component', require('./components/ChartrandomComponen
 Vue.component('testtable-component', require('./components/TesttableComponent.vue'));
 Vue.component('search-component', require('./components/SearchComponent.vue'));
 Vue.component('socket-component', require('./components/SocketComponent.vue'));
+Vue.component('generalchat-component', require('./components/GeneralchatComponent.vue'));
 
 const app = new Vue({
     el: '#app'
