@@ -29,8 +29,10 @@ class ChatController extends Controller
         }
     }
 
-    public function sendPrivateMessage()
+    public function sendPrivateMessage(Request $request)
     {
+        event(new \App\Events\NewPrivateMessage($request->all()));
 
+        return $request->all();
     }
 }
