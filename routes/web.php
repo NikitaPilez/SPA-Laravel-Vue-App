@@ -13,6 +13,8 @@
 
 Route::get('/', 'MainController@main');
 
+Route::get('private-chat','ChatController@privateChat');
+
 Route::get('general-chat','ChatController@index');
 
 Route::get('send-message','ChatController@sendMessage');

@@ -25,6 +25,7 @@ Vue.component('testtable-component', require('./components/TesttableComponent.vu
 Vue.component('search-component', require('./components/SearchComponent.vue'));
 Vue.component('socket-component', require('./components/SocketComponent.vue'));
 Vue.component('generalchat-component', require('./components/GeneralchatComponent.vue'));
+Vue.component('privatechat-component', require('./components/PrivatechatComponent.vue'));
 
 const app = new Vue({
     el: '#app'
