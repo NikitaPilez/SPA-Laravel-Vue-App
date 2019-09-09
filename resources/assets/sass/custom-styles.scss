@@ -1,0 +1,35 @@
+.w-100 {
+  width:100%;
+}
+
+.text-right {
+  text-align: right;
+  float: right;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.text-left {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.block-message {
+  background-color: #CCCCCC;
+  border-radius: 2px;
+  height: 300px;
+  box-shadow: 0 0 5px #CCCCCC;
+  padding: 10px;
+}
+
+.show-message {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  height: 30px;
+  clear: both;
+}
