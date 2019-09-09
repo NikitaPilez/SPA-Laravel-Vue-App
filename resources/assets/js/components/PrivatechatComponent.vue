@@ -11,13 +11,19 @@
                         </select>
                     </div>
                     <div class="col-sm-12">
-                        <textarea rows="10" readonly="" class="form-control">{{dataMessages.join('\n')}}</textarea>
+                        <div class="block-message">
+                            <div class="message-margin">
+                                <p class="show-message" v-bind:class="(message.user === user.email) ? 'text-right' : 'text-left'" v-for="message in dataMessages">
+                                    {{message.message}}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 w-100 text-right">
                     <input type="text" class="form-control" placeholder="Type message.." v-model="message">
                     <div class="input-group-append">
-                        <button @click="sendMessage" class="btn btn-outline-secondary" type="button">Send</button>
+                        <button @click="sendMessage" class="btn btn-outline-secondary margin-top-20" type="button">Send</button>
                     </div>
                 </div>
             </div>
@@ -41,7 +47,7 @@
         mounted() {
             var socket = io('http://localhost:3000');
             socket.on('news-action.' + this.user.id + ':App\\Events\\NewPrivateMessage', function(data) {
-                this.dataMessages.push(data.message.user + ': ' + data.message.message);
+                this.dataMessages.push(data.message);
             }.bind(this));
         },
         methods: {
@@ -53,8 +59,8 @@
                     url: 'send-private-message',
                     params: { channels: this.usersSelect, message: this.message, user: this.user.email }
                 }).then((response) => {
-                    this.dataMessages.push(this.user.email + ': ' + this.message);
-                    app.message = "";
+                    this.dataMessages.push(response.data);
+                    this.message = "";
                 });
             }
         }
